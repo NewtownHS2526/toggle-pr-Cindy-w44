@@ -30,7 +30,7 @@ body {
 }
 
 .blue-text {
-  color: blue;
+  color: rgb(4, 4, 22);
 } 
 
 .is-read {
@@ -43,4 +43,9 @@ body {
 
 .hidden {
   display: none;
+}
+
+.peach {
+  background-color: #f8cece;
+  font-family: 'Times New Roman', Times, serif;
 }
