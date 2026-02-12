@@ -49,3 +49,8 @@ body {
   background-color: #f8cece;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.dark-mode {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}

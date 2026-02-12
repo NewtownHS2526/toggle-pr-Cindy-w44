@@ -1,12 +1,12 @@
 const heading = document.querySelector("#heading");
 const changeColor = () => {
-    heading.classList.add("blue-text");
+    heading.classList.toggle("blue-text");
 };
 heading.addEventListener("click", changeColor);
 
 const subtitle = document.querySelector("#subheading");
 const changeSubColor = () => {
-    subtitle.classList.add("blue-text");
+    subtitle.classList.toggle("blue-text");
 };
 subtitle.addEventListener("click", changeSubColor);
 
@@ -69,3 +69,47 @@ const toggleCustomClass = () => {
 };
 
 subtitle.addEventListener("click", toggleCustomClass);
+
+const checkbox = document.querySelector("#checkbox");
+const actionButtons = document.querySelector("#actions-buttons");
+
+const handleCheckbox = () => {
+    inbox.classList.toggle("is-selected");
+    actionButtons.classList.toggle("hidden");
+}
+
+checkbox.addEventListener("click", handleCheckbox);
+
+const deleteBtn = document.querySelector("#delete-button");
+
+const handleDelete = () => {
+    inbox.classList.toggle("hidden");
+
+    if (deleteBtn.innerHTML === "Delete Message(s)") {
+        deleteBtn.innerHTML = "Undo Deletion";
+    } else {
+        deleteBtn.innerHTML = "Delete Message(s)";
+    }
+};
+
+deleteBtn.addEventListener("click", handleDelete);
+
+const readBtn = document.querySelector("#mark-as-read");
+
+const markRead = () => {
+    unreadBtn.classList.remove("hidden");
+    inbox.classList.remove("is-selected");
+    inbox.classList.add("is-read");
+    checkbox.checked = false;
+};
+
+readBtn.addEventListener("click", markRead);
+
+const darkModeBtn = document.querySelector("#darkmode-button");
+const body = document.querySelector("body");
+
+const toggleDarkMode = () => {
+    body.classList.toggle("dark-mode");
+};
+
+darkModeBtn.addEventListener("click", toggleDarkMode);
